@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <link rel="stylesheet" href="bootstrap.min (1).css">
+<body onload="calcular()">
+    <center>
+     <h1 class="bg-danger text-white">PIZZAS ITALIAN'S</h1>
+     <img src="pizza.png" alt="bg-danger">
+  
+      <div class="card mb-3" m-auto p-2>
+        <h2 class="bg-danger text-white">TAMAÑO</h2><br>
+        <select id="pizzas" class="form-select" aria-label="Default select example">
+            <option value="1">Individual</option>
+            <option value="2">Grande</option>
+            <option value="3">Familiar</option>
+            <option value="4">Jumbo</option>
+          
+            <input type="range" value="0" min="0" max="10" id="v">
+            <h1 id="valor" >0</h1>
+            <script>
+             const cambiar=()=>{
+                document.querySelector("#valor").innerHTML=document.querySelector("#v").value;
+              }
+
+            </script>
+            
+            <h3 class="bg-dark text-white">EXTRAS</h3>
+            <input type="radio" class="form-check-box" name="p" id="refresco" value="1" >REFRESCOS $40
+            <input type="radio" class="form-check-box" name="p" id="papas" value="1" onchange="calcular()">PAPAS   $50
+            <input type="radio" class="form-check-box" name="p" id="alitas" value="1" onchange="calcular()">ALITAS  $75
+
+            <h3 class="bg-primary text-white">INGREDIENTES</h3>
+            <input type="radio" class="form-check-box" name="i" id="p1" onchange="calcular()" value="1">1 ingrediente
+            <input type="radio" class="form-check-box" name="i" id="p2" onchange="calcular()" value="1">2 ingredientes 
+            <input type="radio" class="form-check-box" name="i" id="p3" onchange="calcular()" value="1">3 ingredientes
+              
+              <h3 class="bg-danger text-white" id="res">TOTAL</h3>
+            
+          
+        </select>
+       <script src="app.js"></script>
+       <script src="sweetalert2.all.min.js"></script>
+       <script src="bootstrap.min.js"></script>
+      </div>
+
+
+
+    </center>
+</body>
+</html>
+       
